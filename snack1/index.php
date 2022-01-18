@@ -46,7 +46,6 @@ $partite = [
                 <?php 
                     echo $partite[$i]["squadraCasa"] . ' - ' . $partite[$i]["squadraOspite"] . ' | ' . $partite[$i]["puntiSquadraCasa"] . '-' . $partite[$i]["puntiSquadraOspite"];
                 ?>
-
             </div>
         <?php } ?>
     </div>
