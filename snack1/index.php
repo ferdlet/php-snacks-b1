@@ -3,28 +3,44 @@ Olimpia Milano - Cantù | 55-60 -->
 <?php
 $partite = [
     [
-        "squadraCasa" => "Olimpia Milano",
-        "puntiSquadraCasa" => "55",
-        "squadraOspite" => "Varese",
-        "puntiSquadraOspite" => "60",
+        "squadraCasa" => [
+            "nome" => "Olimpia Milano",
+            "punti" => "55",
+        ],
+        "squadraOspite" => [
+            "nome" => "Varese",
+            "punti" => "60",
+        ]
     ],
     [
-        "squadraCasa" => "Rayer Venezia",
-        "puntiSquadraCasa" => "75",
-        "squadraOspite" => "Virtus Bologna",
-        "puntiSquadraOspite" => "63",
+        "squadraCasa" => [
+            "nome" => "Rayer Venezia",
+            "punti" => "75",
+        ],
+        "squadraOspite" => [
+            "nome" => "Virtus Bologna",
+            "punti" => "63",
+        ]
     ],
     [
-        "squadraCasa" => "Reggiana",
-        "puntiSquadraCasa" => "45",
-        "squadraOspite" => "JuveCaserta",
-        "puntiSquadraOspite" => "85",
+        "squadraCasa" => [
+            "nome" => "Reggiana",
+            "punti" => "45",
+        ],
+        "squadraOspite" => [
+            "nome" => "JuveCaserta",
+            "punti" => "85",
+        ]
     ],
     [
-        "squadraCasa" => "Trieste",
-        "puntiSquadraCasa" => "90",
-        "squadraOspite" => "Dinamo Sassari",
-        "puntiSquadraOspite" => "80",
+        "squadraCasa" => [
+            "nome" => "Trieste",
+            "punti" => "90",
+        ],
+        "squadraOspite" => [
+            "nome" => "Dinamo Sassari",
+            "punti" => "80",
+        ]
     ],
 ];
 ?>
@@ -44,7 +60,7 @@ $partite = [
             <div style="margin-bottom:15px;">
                 <h2>Partita <?php echo $i + 1; ?></h2>
                 <?php 
-                    echo $partite[$i]["squadraCasa"] . ' - ' . $partite[$i]["squadraOspite"] . ' | ' . $partite[$i]["puntiSquadraCasa"] . '-' . $partite[$i]["puntiSquadraOspite"];
+                    echo $partite[$i]["squadraCasa"]["nome"] . ' - ' . $partite[$i]["squadraOspite"]["nome"] . ' | ' . $partite[$i]["squadraCasa"]["punti"] . '-' . $partite[$i]["squadraOspite"]["punti"];
                 ?>
             </div>
         <?php } ?>
