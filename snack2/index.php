@@ -16,8 +16,13 @@ $age = $_GET["age"];
 
 <body>
     <div>
-        <?php if (strlen($nome) > 3 && strpos($mail, '@') && strpos($mail, '.') && is_numeric($age)) {
-            echo "<h2 style='color: green'>Accesso riuscito</h2>";
+        <?php if (isset($_GET["name"]) && isset($_GET["mail"]) && isset($_GET["age"])) {
+
+            if (strlen($nome) > 3 && strpos($mail, '@') && strpos($mail, '.') && is_numeric($age)) {
+                echo "<h2 style='color: green'>Accesso riuscito</h2>";
+            } else {
+                echo "<h2 style='color: red'>Accesso negato</h2>";
+            }
         } else {
             echo "<h2 style='color: red'>Accesso negato</h2>";
         }
